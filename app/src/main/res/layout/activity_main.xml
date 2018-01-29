@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aplicacion.android.universidad_distrital.vertex.Main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <Button
+            android:id="@+id/formulario1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Crear Formulario"
+            tools:layout_editor_absoluteX="354dp"
+            tools:layout_editor_absoluteY="135dp" />
+
+        <Button
+            android:id="@+id/consulta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="consultar formulario" />
+
+        <Button
+            android:id="@+id/encuesta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="llenar encuesta"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="135dp" />
+
+        <Button
+            android:id="@+id/salir2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="salirdeVertex"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="135dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
