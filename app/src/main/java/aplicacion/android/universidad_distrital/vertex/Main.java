@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 public class Main extends AppCompatActivity {
 
     Button formulario1,encuesta1,salir2,consultar1;
+//    Spinner opciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +23,6 @@ public class Main extends AppCompatActivity {
         salir2 = (Button)findViewById(R.id.salir2);
         consultar1 =(Button)findViewById(R.id.consulta1);
 
-
-
         encuesta1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -29,10 +30,6 @@ public class Main extends AppCompatActivity {
 
                 Intent intent  = new Intent(Main.this,Encuesta.class);
                 startActivity(intent);
-
-
-
-
 
             }
         });
@@ -42,8 +39,13 @@ public class Main extends AppCompatActivity {
             public void onClick(View view) {
 
 
+
+
+
                 Intent intent = new Intent(Main.this,Formulario.class);
                 startActivity(intent);
+
+
             }
         });
 
@@ -67,7 +69,6 @@ public class Main extends AppCompatActivity {
 
             }
         });
-
 
 
 

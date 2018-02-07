@@ -267,10 +267,14 @@
                             />
 
                         <Spinner
-                            android:id="@+id/spinner"
+                            android:id="@+id/sp01 "
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/cell_shape" />
+                            android:background="@drawable/cell_shape">
+
+
+                        </Spinner>
+
 
                     </TableRow>
 
@@ -318,7 +322,7 @@
                             />
 
                         <Spinner
-                            android:id="@+id/departamento2"
+                            android:id="@+id/sp04"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/cell_shape" />
@@ -342,7 +346,7 @@
                             />
 
                         <Spinner
-                            android:id="@+id/municipio2"
+                            android:id="@+id/sp03"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/cell_shape" />
@@ -449,10 +453,15 @@
                             />
 
                         <Spinner
-                            android:id="@+id/estadovertice2"
+                            android:id="@+id/sp02"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/cell_shape" />
+                            android:background="@drawable/cell_shape">
+
+
+
+                        </Spinner>
+
 
 
                     </TableRow>
