@@ -57,10 +57,10 @@ public class consultaformulario extends AppCompatActivity {
                 entidad.setText(RegistroD1.getEntidad());
                 opciones.setText(RegistroD1.getTipovertice());
                 datum.setText(RegistroD1.getDatum()); //poner en un tipo texto.
-                departamento.setText(RegistroD1.getNombrev());
-                municipio.setText(RegistroD1.getNombrev());
+                departamento.setText(RegistroD1.getDepartamento());
+                municipio.setText(RegistroD1.getMunicipio());
                 sitio.setText(RegistroD1.getSitio());
-                opestado.setText(RegistroD1.getNombrev());
+                opestado.setText(RegistroD1.getEstadovertice());
                 describio.setText(RegistroD1.getDescribio());
                 fecha.setText(RegistroD1.getFecha());
                 hora.setText(RegistroD1.getHora());
