@@ -1,13 +1,23 @@
 package aplicacion.android.universidad_distrital.vertex;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class Formulario extends AppCompatActivity {
@@ -18,16 +28,16 @@ public class Formulario extends AppCompatActivity {
 
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
 
 
-        Button enviar,consultar;
-        final String datum = "WGS-84";
+        Button enviar,consultar,fotopunto, panoramica,localizacion;
         final Spinner opciones,opestado,municipio,departamento;
-        final EditText cedula,Formulario,nombrev,nomenclatura,lat,log,altura,entidad,tipovertice,sitio,estadovertice,describio,hora,fecha;
+        final EditText cedula,Formulario,nombrev,nomenclatura,lat,log,altura,entidad,tipovertice,datum,sitio,estadovertice,describio,hora,fecha;
 
 
 
@@ -49,7 +59,10 @@ public class Formulario extends AppCompatActivity {
         fecha           =(EditText)findViewById(R.id.fecha1);
         enviar          =(Button)findViewById(R.id.enviar1);
         consultar       =(Button)findViewById(R.id.consultar1);
-
+        fotopunto       =(Button)findViewById((R.id.fotopunto));
+        datum           =(EditText)findViewById(R.id.datum1);
+        panoramica      =(Button)findViewById(R.id.panoramica1);
+        localizacion    =(Button)findViewById(R.id.localizacion);
 
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, android.R.layout.simple_spinner_item );
@@ -65,6 +78,9 @@ public class Formulario extends AppCompatActivity {
         departamento.setAdapter(adapter4);
 
 
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyymmddhhmmss");
+            String date = dateFormat.format(new Date() );
+            final String imgfh = "img" + date;
 
 
 //
@@ -126,7 +142,7 @@ public class Formulario extends AppCompatActivity {
                 RegistroDatos RegistroD = new RegistroDatos
                         (cedula.getText().toString(),nombrev.getText().toString(),nomenclatura.getText().toString(),
                         lat.getText().toString(),log.getText().toString(),altura.getText().toString(),
-                        entidad.getText().toString(),opciones.getSelectedItem().toString(),datum.toString(),
+                        entidad.getText().toString(),opciones.getSelectedItem().toString(),datum.getText().toString(),
                         departamento.getSelectedItem().toString(),municipio.getSelectedItem().toString(),
                         sitio.getText().toString(),opestado.getSelectedItem().toString(),describio.getText().toString(),
                         fecha.getText().toString(),hora.getText().toString());
@@ -147,36 +163,63 @@ public class Formulario extends AppCompatActivity {
         });
 
 
+        localizacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("http://www.dondeestoyahorita.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
+            }
 
-        consultar.setOnClickListener(new View.OnClickListener() {
+        });
 
 
+
+        fotopunto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-
-                List<RegistroDatos> RegistroDatoslista = RegistroDatos.find(RegistroDatos.class, "Cedula = ?",cedula.getText().toString());
-                RegistroDatos RegistroD1 = RegistroDatoslista.get(0);
-                nombrev.setText(RegistroD1.getNombrev());
-                nomenclatura.setText(RegistroD1.getNomenclatura());
-                lat.setText(RegistroD1.getLat());
-                log.setText(RegistroD1.getLog());
-                altura.setText(RegistroD1.getAltura());
-                entidad.setText(RegistroD1.getEntidad());
-                opciones.setText(RegistroD1.getTipovertice());
-                datum.setText(RegistroD1.getDatum());
-                departamento.setText(RegistroD1.getNombrev());
-                municipio.setText(RegistroD1.getNombrev());
-                sitio.setText(RegistroD1.getSitio());
-                opestado.setText(RegistroD1.getNombrev());
-                describio.setText(RegistroD1.getDescribio());
-                fecha.setText(RegistroD1.getFecha());
-                hora.setText(RegistroD1.getHora());
+                try {
 
 
 
 
+                    Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    File imagesFolder = new File(Environment.getExternalStorageDirectory(),"fotospuntovertice/");
+                    imagesFolder.mkdirs();
+                    File image = new File(imagesFolder,imgfh +".jpg");
+                    Uri uriSavedImage = Uri.fromFile(image);
+                    cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
+                    startActivityForResult(cameraIntent, 1);
+
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), "carpeta e imagen no creada", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
+
+        panoramica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                File imagesFolder = new File(Environment.getExternalStorageDirectory(),"fotopanoramica/");
+                //tttboolean creada = fileImagen.exists();
+                imagesFolder.mkdirs();
+                File image = new File(imagesFolder, imgfh +".jpg");
+                Uri uriSavedImage = Uri.fromFile(image);
+                cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
+                startActivityForResult(cameraIntent, 1);
+
+           }
+        });
+
+
+
+
+
+        }
     }
-}
+
+

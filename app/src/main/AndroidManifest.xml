@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="aplicacion.android.universidad_distrital.vertex">
 
+    <uses-permission android:name ="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="an droid.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:debuggable="true"
@@ -11,9 +15,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:name="com.orm.SugarApp"
         tools:ignore="HardcodedDebugMode">
         <activity android:name=".Main" />
+
+        <meta-data android:name="DATABASE" android:value="dbvertex.db" />
+        <meta-data android:name="VERSION" android:value="1" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="aplicacion.android.universidad_distrital.vertex" />
+
         <activity
+
+
+
             android:name=".SplashScreen"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
             <intent-filter>

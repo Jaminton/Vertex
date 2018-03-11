@@ -6,4 +6,625 @@
     android:layout_height="match_parent"
     tools:context="aplicacion.android.universidad_distrital.vertex.consultaformulario">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="horizontal|vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="291dp"
+                    android:layout_height="118dp"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/cell_shape"
+                    android:cropToPadding="false"
+                    app:srcCompat="@drawable/escudoud" />
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:gravity="center"
+                    android:text="FICHA TECNICA \n VÉRTICE GEODÉSICO  \n PLATAFORMA VERTEX"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="NOMBRE VERTICE"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/nombrev1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="5"
+                    android:text="ingrese nombre vertice" />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="NOMENCLATURA"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/nomenclaura1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="5"
+                    android:inputType="textPersonName"
+                    android:text="ingrese nomenclatura" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:background="@drawable/cell_shapecolor"
+                    android:gravity="center"
+                    android:text="COORDENADAS GCSW GS84 "
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+
+                    />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="LATITUD"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/latitud1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="ingrese coordenadas lat" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/textView7"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/cell_shape"-->
+                <!--android:text="recive coordenadas lat"-->
+                <!--android:textColor="#000000"-->
+                <!--android:textSize="15dp"-->
+
+                <!--/>-->
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/longitud"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="LONGITUD"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/longitud1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="ingrese coordenadas long" />
+
+
+                <!--<TextView-->
+                <!--android:id="@+id/textView8"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/cell_shape"-->
+                <!--android:text="recive coordenadas long"-->
+                <!--android:textColor="#000000"-->
+                <!--android:textSize="15dp"-->
+                <!--/>-->
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/altura"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="ALTURA ELIP(m)"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/altura1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Ingresa Altura ELIP(M)" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/generalidades"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:background="@drawable/cell_shapecolor"
+                    android:gravity="center"
+                    android:text="GENERALIDADES"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/entidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="Entidad y/o Proyecto"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/entidad1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Ingrese Entidad y/o Proyecto" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tipovertice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="Tipo de Vertice control geodesico"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/tipovertice1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Tipo vertice">
+
+
+                </EditText>
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/datum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="DATUM"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+
+                    android:id="@+id/datum1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="WGS-84"
+
+                    />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/departamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="DEPARTAMENTO"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/departamento1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="departamento" />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/municipio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="MUNICIPIO"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/municipio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="municipio" />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/sitio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="SITIO"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/sitio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/ingrese_sitio" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/localizacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:background="@drawable/cell_shape"
+                    android:text="LOCALIZACIÓN" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    android:text="Foto Punto" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    android:text="Panoramica de Vertice" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/descpunto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:background="@drawable/cell_shapecolor"
+                    android:gravity="center"
+                    android:text="DESCRIPCIÓN PUNTO"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/estadovertice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="ESTADO DEL VERTICE"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/estadovertice1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="estado vertice">
+
+
+                </EditText>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/describio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="DESCRIBIO"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/describio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="persona o entidad" />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/fecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="Fecha"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/fecha1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="ingrese fecha" />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/hora"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:text="Hora"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/hora1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="ingrese hora" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <EditText
+                    android:id="@+id/cedula1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:background="@drawable/cell_shape"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Cedula" />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <Button
+                    android:id="@+id/consultar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="CONSULTAR"
+
+                    />
+
+                <Button
+                    android:id="@+id/capura1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="CAPTURA"
+
+                    />
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
 </android.support.constraint.ConstraintLayout>

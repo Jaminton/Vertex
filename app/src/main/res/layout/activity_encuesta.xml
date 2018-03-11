@@ -1,17 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="aplicacion.android.universidad_distrital.vertex.Encuesta">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="*">
 
-        >
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/p1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:text="¿Cree usted  que esta \n aplicación es funcional?"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:text="Responda si o no"
+            android:textSize="15dp"
+            />
+        </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/p2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:text="¿Tuvo alguna dificultad  \n al registrar algun dato en la aplicacion?"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/r2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:text="Responda si o no"
+            android:textSize="15dp"
+            />
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/p3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:text="¿Fueron claras las instrucciones  \n para el registro de datos en la aplicación?"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/r3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:text="Responda si o no"
+            android:textSize="15dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/p4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:text="¿conoce alguna aplicacion \n similar a esta?"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/r4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:text="Responda si o no"
+            android:textSize="15dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/p5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:text="¿Recomendaría esta aplicacion \n a otros profecionales?"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/r5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:text="Responda si o no"
+            android:textSize="15dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/p6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:text="¿La interfaz grafica es agradable \n con el usuario?"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/r6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:text="Responda si o no"
+            android:textSize="15dp"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/p7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:text="¿La aplicacion cuenta con lo suficiente  \n para el fin requerido ?"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/r7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:text="Responda si o no"
+            android:textSize="15dp"
+            />
+    </TableRow>
+
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/cedu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:text="ingrese documento"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            />
+
+        <EditText
+            android:id="@+id/cdu1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cell_shape"
+            android:ems="8"
+            android:inputType="textPersonName"
+            android:text="documento"
+            android:textSize="15dp"
+            />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/e1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Enviar"
+
+
+            />
+
+        <Button
+            android:id="@+id/c1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Consultar"
+
+
+            />
+
+
+
+    </TableRow>
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
         android:id="@+id/regresar1"
@@ -19,19 +263,20 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Regresar"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="176dp"
+
+
         />
 
-        <Button
-            android:id="@+id/salir1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Salir"
-            tools:layout_editor_absoluteX="12dp"
-            tools:layout_editor_absoluteY="176dp"
-            />
-    </LinearLayout>
+
+
+    </TableRow>
+
+
+
+
+
+
+</TableLayout>
+
 
 </android.support.constraint.ConstraintLayout>
